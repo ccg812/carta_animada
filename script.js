@@ -24,27 +24,7 @@ function mostrarMensaje() {
   });
 
   // Partículas flotantes (opcional)
-  for (let i = 0; i < 20; i++) {
-    const particula = document.createElement("div");
-    particula.classList.add("particula");
-    document.body.appendChild(particula);
-
-    gsap.set(particula, {
-      x: window.innerWidth / 2,
-      y: window.innerHeight / 2,
-      scale: Math.random() * 0.5 + 0.5,
-      opacity: 1
-    });
-
-    gsap.to(particula, {
-      x: "+=" + (Math.random() * 200 - 100),
-      y: "-=" + (Math.random() * 300 + 100),
-      opacity: 0,
-      duration: 2 + Math.random(),
-      ease: "power1.out",
-      onComplete: () => particula.remove()
-    });
-  }
+ 
 }
 
 // Partículas flotantes (corazones)
@@ -77,3 +57,4 @@ function mostrarMensaje() {
   mensaje.style.display = "block";
   gsap.to(mensaje, { opacity: 1, y: 0, duration: 1 });
 }
+
